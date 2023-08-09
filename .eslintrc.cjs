@@ -20,7 +20,7 @@ module.exports = {
     ],
     'no-unused-vars': 'warn',
     'react/no-unescaped-entities': 'warn',
-
+    'react/prop-types': 'warn'
 
   },
 }
