@@ -5,15 +5,17 @@ import Loader from "./Loader";
 
 function AppLayouts() {
   const navigation = useNavigation();
-  const isLoading=navigation.state === 'loading';
+  const isLoading = navigation.state === "loading";
   return (
-    <div className="layout">
-      {isLoading && <Loader/>}
+    <div className="grid  h-screen grid-rows-[auto_1fr_auto]">
+      
+      {isLoading && <Loader />}
       <Header />
-      <main>
-        <h1>Contenet</h1>
-        <Outlet />
-      </main>
+      <div className="overflow-scroll">
+        <main className="mx-auto  max-w-3xl ">
+          <Outlet />
+        </main>
+      </div>
       <CartOverView />
     </div>
   );
